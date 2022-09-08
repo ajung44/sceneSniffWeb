@@ -37,7 +37,7 @@ loader.load('newLogo2.png', function (texture) {
   ];
 
   const mesh = new THREE.Mesh(geometry, material);
-  const mesh2 = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({ color: 0xB5D9F4 }));
+  const mesh2 = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: 0xB5D9F4 }));
   scene.add(mesh);
   scene.add(mesh2);
   scene.add(spotLight);
