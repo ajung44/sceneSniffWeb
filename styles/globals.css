@@ -259,3 +259,8 @@ video {
   display: flex;
   justify-content: center;
 }
+
+#boxtex {
+  display: none;
+  z-index: -100;
+}

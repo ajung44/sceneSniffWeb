@@ -12,6 +12,10 @@ export default function Home() {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
         <script type="text/javascript" src ="/static/main.js" defer></script>
         <header>
+          <div>
+          <video id="boxtex" autoplay controls loop="true" muted>
+            <source src="boxtex.mp4" type="video/mp4" />
+          </video></div>
         <div className="social-icons">
           <a className="social-icons-link" href="https://github.com/oslabs-beta/sceneSniff" target="_blank">
             <img className="link" src="github.png" alt="github icon" />

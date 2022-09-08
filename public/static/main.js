@@ -12,6 +12,9 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+const box2Texture = document.getElementById('boxtex');
+box2Texture.play();
+
 const loader = new THREE.TextureLoader();
 loader.load('newLogo2.png', function (texture) {
   const geometry = new THREE.BoxGeometry(115, 115, 115);
@@ -35,9 +38,9 @@ loader.load('newLogo2.png', function (texture) {
       color: '#506A7E', //back
     }),
   ];
-
+  console.log(window)
   const mesh = new THREE.Mesh(geometry, material);
-  const mesh2 = new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({ color: 0xB5D9F4 }));
+  const mesh2 = new THREE.Mesh(new THREE.BoxGeometry(50,50,50), new THREE.MeshStandardMaterial({ color: 0xB5D9F4, map: new THREE.VideoTexture( box2Texture )}));
   scene.add(mesh);
   scene.add(mesh2);
   scene.add(spotLight);
