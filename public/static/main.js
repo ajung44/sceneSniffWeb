@@ -1,6 +1,6 @@
 const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000);
 camera.position.z = 400;
-
+let mesh3;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x212121);
 
@@ -40,9 +40,7 @@ loader.load('newLogo2.png', function (texture) {
   ];
   console.log(window)
   const mesh = new THREE.Mesh(geometry, material);
-  const mesh2 = new THREE.Mesh(new THREE.BoxGeometry(50,50,50), new THREE.MeshStandardMaterial({ color: 0xB5D9F4, map: new THREE.VideoTexture( box2Texture )}));
   scene.add(mesh);
-  scene.add(mesh2);
   scene.add(spotLight);
   scene.add(ambLight);
 
@@ -56,7 +54,10 @@ loader.load('newLogo2.png', function (texture) {
   console.log(camera)
   function animation() {
     requestAnimationFrame( animation )
-
+    if (mesh3 !== undefined) {
+      mesh3.rotation.y += .01;
+      mesh3.rotation.x += .01;
+    }
     renderer.render(scene, camera);
   }
   animation();

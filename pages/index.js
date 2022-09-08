@@ -13,10 +13,10 @@ export default function Home() {
         <script type="text/javascript" src ="/static/main.js" defer></script>
         <header>
           <div>
-          <video id="boxtex" autoplay controls loop="true" muted>
+          <video id="boxtex" autoPlay controls loop={true} muted>
             <source src="boxtex.mp4" type="video/mp4" />
           </video></div>
-        <div className="social-icons">
+          <div className="social-icons">
           <a className="social-icons-link" href="https://github.com/oslabs-beta/sceneSniff" target="_blank">
             <img className="link" src="github.png" alt="github icon" />
           </a>
@@ -61,6 +61,7 @@ export default function Home() {
           <div className="demoContent">
             When accessing the Chrome Dev Tools window, open up sceneSniff to allow for real time adjustments and rendering of 3D objects within the scene of
             your browser window. Select one of the registered mesh objects from the drop-down list to begin modifying it's appearance within the rendered scene.
+            Check out our example <a className="threejs" href="/example" target="_self">HERE</a>
           </div>
         </div>
       </div>
@@ -69,7 +70,7 @@ export default function Home() {
         <h2 className="team">Meet Our Team</h2>
         <div className="profiles">
         <div className="profile">
-          <img src="/jackie.jpg" alt="Profile Image" class="profile-image" />
+          <img src="/jackie.jpg" alt="Profile Image" className="profile-image" />
           <div className="profile-name">Jackie Mok</div>
           <div className="profile-title">Full Stack Engineer</div>
           <div className="profile-links">
@@ -90,7 +91,7 @@ export default function Home() {
           </div>
         </div>
         <div className="profile">
-          <img src="/eli.jpg" alt="Profile Image" class="profile-image" />
+          <img src="/eli.jpg" alt="Profile Image" className="profile-image" />
           <div className="profile-name">Eli Muir</div>
           <div className="profile-title">Full Stack Engineer</div>
           <div className="profile-links">
